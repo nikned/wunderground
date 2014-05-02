@@ -1,0 +1,36 @@
+extends layout
+block content
+    h1= title
+    p # Welcome to WunderGround App !!
+    p # Displaying default cities weather forcasts !!
+
+
+    div(class='CSSTableGenerator')
+         table
+         thead
+            tr
+                td
+                    Row     #   City
+
+                td
+                    Row     #   State
+                td
+                    Row     #   weather-info
+         tbody
+            if data
+
+               each item in data
+                li
+                    td
+                        Row     #{item['city']}
+
+                    td
+                        Row     #{item['state']}
+
+                    td
+                        Row     #{item['info']}
+
+                        //td #{t.state}
+                        //
+                        //td #{t.info }
+
